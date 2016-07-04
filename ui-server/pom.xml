@@ -11,6 +11,16 @@
 	<name>ui-server</name>
 	<description>Demo project for Spring Boot</description>
 
+	<!--
+		pom.xmlの継承設定。この場合は、SpringBootのpomを継承することで様々な
+		プラグインが提供される。
+		親pomにプロジェクトを横断したdependencyなどを定義することができる
+
+		http://qiita.com/skinoshita/items/b2c48659b977b26b1eec
+
+
+		親pom側では<modules>タグで対象とするプロジェクトを指定することも可能
+	-->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -51,7 +61,12 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
+	<!--
+		dependencyに対する管理定義
+		例えば、各dependencyのバージョンをここで集中管理できる
+
+	-->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
