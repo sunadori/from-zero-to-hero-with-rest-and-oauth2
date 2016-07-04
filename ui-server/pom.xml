@@ -64,8 +64,11 @@
 
 	<!--
 		dependencyに対する管理定義
-		例えば、各dependencyのバージョンをここで集中管理できる
-
+		例えば、親pomで各dependencyのバージョンをここで指定することで、
+		依存関係に縛りを入れることができ、関連ライブラリのバージョンの
+		コンフリクトのexclusion設定などもここで一括指定することなどが
+		できるようになる
+		http://cynipe.hateblo.jp/entry/20101128/1290943804
 	-->
 	<dependencyManagement>
 		<dependencies>
